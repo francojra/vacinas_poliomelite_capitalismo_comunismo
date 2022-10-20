@@ -57,7 +57,13 @@ poli2 <- poli %>%
   filter(Entity %in% c("United States", "Japan", "Germany",
                        "Cuba", "China", "North Korea")) %>%
   view()
-  
+
+poli3 <- poli %>%
+  filter(Entity %in% c("United States", "China")) %>%
+  view()
+
+# Gráficos ---------------------------------------------------------------------------------------------------------------------------------
+
   
   
   
