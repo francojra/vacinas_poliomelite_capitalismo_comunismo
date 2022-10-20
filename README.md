@@ -1,0 +1,1 @@
+# vacinas_poliomelite_capitalismo_socialismo
