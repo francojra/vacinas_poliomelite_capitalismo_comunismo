@@ -66,7 +66,7 @@ poli3 <- poli %>%
 
 c4a("safe", 6)
 
-ggplot(poli1, aes(x = Entity, y = media, fill = Entity)) +
+ggplot(poli1, aes(x = fct_reorder(Entity, media), y = media, fill = Entity)) +
   geom_col(width = 0.9) +
   geom_errorbar(aes(ymin = media - se, ymax = media + se),
                 size = 0.8, width = 0.2) +
@@ -74,8 +74,11 @@ ggplot(poli1, aes(x = Entity, y = media, fill = Entity)) +
                                "#DDCC77", "#117733",
                               "#332288", "#AA4499")) +
   scale_y_continuous(expand = expansion(mult = c(0,0))) +
-  labs(x = "Países", y = "Taxa de Vacinação contra Poliomelite (%)") +
-  theme_ipsum() +
+  scale_x_discrete(labels = c("Coreia do Norte", "China", "Alemanha",
+                              "Estados Unidos", "Japão", "Cuba")) +
+  labs(x = "Países", y = "Taxa de Vacinação\n contra Poliomelite (%)") +
+  theme_ipsum(axis_title_size = 16,
+              axis_text_size = 14) +
   theme(legend.position = "none", axis.text = element_text(color = "black"))
   
   
