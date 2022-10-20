@@ -64,6 +64,18 @@ poli3 <- poli %>%
 
 # Gráficos ---------------------------------------------------------------------------------------------------------------------------------
 
-  
+c4a("safe", 6)
+
+ggplot(poli1, aes(x = Entity, y = media, fill = Entity)) +
+  geom_col(width = 0.9) +
+  geom_errorbar(aes(ymin = media - se, ymax = media + se),
+                size = 0.8, width = 0.2) +
+  scale_fill_manual(values = c("#88CCEE", "#CC6677",
+                               "#DDCC77", "#117733",
+                              "#332288", "#AA4499")) +
+  scale_y_continuous(expand = expansion(mult = c(0,0))) +
+  labs(x = "Países", y = "Taxa de Vacinação contra Poliomelite (%)") +
+  theme_ipsum() +
+  theme(legend.position = "none", axis.text = element_text(color = "black"))
   
   
