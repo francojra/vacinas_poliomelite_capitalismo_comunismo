@@ -43,3 +43,21 @@ poli <- poli %>%
   select(-Code) %>%
   rename(taxa_vacina = Pol3....of.one.year.olds.immunized.) %>%
   view()
+
+poli1 <- poli %>%
+  filter(Entity %in% c("United States", "Japan", "Germany",
+                       "Cuba", "China", "North Korea")) %>%
+  group_by(Entity) %>%
+  summarise(media = mean(taxa_vacina),
+            sd = sd(taxa_vacina), n = n(),
+            se = sd/sqrt(n)) %>%
+  view()
+
+poli2 <- poli %>%
+  filter(Entity %in% c("United States", "Japan", "Germany",
+                       "Cuba", "China", "North Korea")) %>%
+  view()
+  
+  
+  
+  
