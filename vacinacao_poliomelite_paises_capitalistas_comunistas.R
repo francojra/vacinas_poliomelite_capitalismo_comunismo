@@ -31,5 +31,15 @@ library(cols4all)
 library(hrbrthemes)
 library(ggthemes)
 
+# Carregar dados ---------------------------------------------------------------------------------------------------------------------------
 
+poli <- read.csv("polio-vaccine-coverage-of-one-year-olds.csv")
+view(poli)
+names(poli)
 
+# Manipular dados --------------------------------------------------------------------------------------------------------------------------
+
+poli <- poli %>%
+  select(-Code) %>%
+  rename(taxa_vacina = Pol3....of.one.year.olds.immunized.) %>%
+  view()
