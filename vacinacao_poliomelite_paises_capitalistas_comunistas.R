@@ -96,3 +96,14 @@ ggplot(poli2, aes(x = Year, y = taxa_vacina,
               axis_text_size = 14) +
   theme(axis.text = element_text(color = "black"))
 
+c4a("dark2", 2)
+
+ggplot(poli3, aes(x = Year, y = taxa_vacina,
+                  group = Entity, color = Entity)) +
+  geom_line(size = 2.2) +
+  scale_color_manual(values = c("#1B9E77", "#D95F02")) +
+  labs(x = "Tempo (anos)", y = "Taxa de Vacinação\n contra Poliomelite (%)",
+       color = "Países") +
+  theme_ipsum(axis_title_size = 16,
+              axis_text_size = 14) +
+  theme(axis.text = element_text(color = "black"))
