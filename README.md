@@ -1,4 +1,4 @@
-# Vacinas contra Poliomelite em Países Capitalistas e Comunistas
+# Vacinas contra Poliomelite em Países Democratas e Autocratas
 
 ### Autoria do script: Jeanne Franco
 ### Data: 19/10/22
